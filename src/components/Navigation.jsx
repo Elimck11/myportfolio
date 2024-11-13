@@ -1,33 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
+import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
-    return (
-        <nav style={navStyle}>
-            <ul style={ulStyle}>
-                <li style={liStyle}><Link to="/">Aboutme</Link></li>
-                <li style={liStyle}><Link to="/about">Portfolio</Link></li>
-                <li style={liStyle}><Link to="/contact">Contact</Link></li>
-                <li style={liStyle}><Link to="/resume">Resume</Link></li>
-            </ul>
-        </nav>
-    );
-};
-
-const navStyle = {
-    background: '#333',
-    padding: '10px 20px',
-};
-
-const ulStyle = {
-    listStyle: 'none',
-    display: 'flex',
-    justifyContent: 'space-around',
-    padding: 0,
-};
-
-const liStyle = {
-    color: '#fff',
+  return (
+    <nav>
+      <ul>
+        <li><NavLink to="/" end>About Me</NavLink></li>
+        <li><NavLink to="/portfolio">Portfolio</NavLink></li>
+        <li><NavLink to="/contact">Contact</NavLink></li>
+        <li><NavLink to="/resume">Resume</NavLink></li>
+      </ul>
+    </nav>
+  );
 };
 
 export default Navigation;
